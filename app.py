@@ -32,8 +32,8 @@ app.config.update(dict(
     MAIL_PORT = 465,
     MAIL_USE_TLS = False,
     MAIL_USE_SSL = True,
-    MAIL_USERNAME = 'campigotto111@gmail.com',
-    MAIL_PASSWORD = 'Daoxiao99'
+    MAIL_USERNAME = 'xxx@gmail.com',
+    MAIL_PASSWORD = 'xxx'
 ))
 
 mail = Mail(app)
@@ -47,7 +47,7 @@ print(" connected to email ... probably")
 # checking the connection to cloud ongodb and printing in the console the list of collections under the database
 
 try:
-    myclient = pymongo.MongoClient("mongodb://mrbacco:mongodb001@cluster0-shard-00-00-goutv.mongodb.net:27017,cluster0-shard-00-01-goutv.mongodb.net:27017,cluster0-shard-00-02-goutv.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority")
+    myclient = pymongo.MongoClient("mongodb://mrbacco:xxx@cluster0-shard-00-00-goutv.mongodb.net:27017,cluster0-shard-00-01-goutv.mongodb.net:27017,cluster0-shard-00-02-goutv.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority")
     mydb = myclient["lawyers"]
     mycol = mydb["feedback"]
     print("if connected to db, then these are the collections in mydb: ", mydb.list_collection_names()) #used to check if db is connected
@@ -90,12 +90,6 @@ def index():
     return render_template('home.html', form = form), print("you are under the home page now using POST, data are sent to database")
 
 ############## defining the routes for the different web pages END ##############
-
-
-
-
-
-
 
 
 ####################################################################################################
